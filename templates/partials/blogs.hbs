@@ -1,11 +1,18 @@
 <div id="blogs id">
 <div class="mb-3">
-  <p class="text-center sub-heading">(check your blogs!!)</p>
+  <p class="text-center sub-heading">(upload your blogs!!)</p>
+  <form action="/blogs" method="POST">
   <label for="exampleFormControlInput1" class="form-label">Email address</label>
   <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
 </div>
 <div class="mb-3">
   <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
   <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+</div>
+
+<div class="input-group mb-3">
+  <input type="file" class="form-control" id="inputGroupFile02">
+  <button type="submit" class="btn-style btn-primary">upload</button>
+  </form>
 </div>
 </div>
