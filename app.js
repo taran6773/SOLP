@@ -45,7 +45,7 @@ app.post("/register" , async(req , res)=>{
        console.log(req.body)
        const userData= new Register(req.body)
        await userData.save();
-       res.status(201).render("index");
+       res.status(201).render("register");
     } catch (error) {
         res.status(500).send(error);
     }
@@ -61,7 +61,7 @@ app.post("/login" , async(req , res)=>{
        console.log(req.body)
        const userData= new login(req.body)
        await userData.save();
-       res.status(201).render("index");
+       res.status(201).render("user_service");
 
 
 
@@ -77,6 +77,72 @@ app.post("/contact" , async(req , res)=>{
        const userData= new User(req.body)
        await userData.save();
        res.status(201).render("index");
+    } catch (error) {
+        res.status(500).send(error);
+    }
+})
+
+
+
+app.get("/notes",(req,res)=>{
+    res.render("notes");
+});
+
+app.post("/notes" , async(req , res)=>{
+    try {
+       // res.send(req.body);
+       console.log(req.body)
+       const userData= new Register(req.body)
+       await userData.save();
+       res.status(201).render("notes");
+    } catch (error) {
+        res.status(500).send(error);
+    }
+})
+
+app.get("/lectures",(req,res)=>{
+    res.render("lectures");
+});
+
+app.post("/lectures" , async(req , res)=>{
+    try {
+       // res.send(req.body);
+       console.log(req.body)
+       const userData= new Register(req.body)
+       await userData.save();
+       res.status(201).render("lectures");
+    } catch (error) {
+        res.status(500).send(error);
+    }
+})
+
+app.get("/blogs",(req,res)=>{
+    res.render("blogs");
+});
+
+app.post("/blogs" , async(req , res)=>{
+    try {
+       // res.send(req.body);
+       console.log(req.body)
+       const userData= new Register(req.body)
+       await userData.save();
+       res.status(201).render("blogs");
+    } catch (error) {
+        res.status(500).send(error);
+    }
+})
+
+app.get("/contact",(req,res)=>{
+    res.render("contact");
+});
+
+app.post("/contact" , async(req , res)=>{
+    try {
+       // res.send(req.body);
+       console.log(req.body)
+       const userData= new Register(req.body)
+       await userData.save();
+       res.status(201).render("contact");
     } catch (error) {
         res.status(500).send(error);
     }
