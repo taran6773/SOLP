@@ -45,7 +45,7 @@ app.post("/register" , async(req , res)=>{
        console.log(req.body)
        const userData= new Register(req.body)
        await userData.save();
-       res.status(201).render("register");
+       res.status(201).render("index");
     } catch (error) {
         res.status(500).send(error);
     }
@@ -57,9 +57,15 @@ app.get("/login",(req,res)=>{
 
 app.post("/login" , async(req , res)=>{
     try {
+        const { email, password } = req.body;
+        const user = await Register.findOne({ email }).select('+password');
+        if (!user) {
+            return new Error('Signup first');
+          }
        // res.send(req.body);
        console.log(req.body)
        const userData= new login(req.body)
+    
        await userData.save();
        res.status(201).render("user_service");
 

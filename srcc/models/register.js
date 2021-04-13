@@ -13,6 +13,17 @@ const registerschema = mongoose.Schema({
         //required:true,
         minlength:8
     },
+    passwordConfirm: {
+        type: String,
+        required: [true, 'Please confirm your password'],
+        //This validation only works on create and save
+        validate: {
+          validator: function(el) {
+            return el === this.password;
+          },
+          message: 'Your passwords are not the same'
+        }
+      },
     phone:{
         type:Number,
         //required:true,
