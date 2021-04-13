@@ -45,7 +45,7 @@ app.post("/register" , async(req , res)=>{
        console.log(req.body)
        const userData= new Register(req.body)
        await userData.save();
-       res.status(201).render("index");
+       res.status(201).render("login");
     } catch (error) {
         res.status(500).send(error);
     }
