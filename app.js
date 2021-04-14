@@ -57,22 +57,21 @@ app.get("/login",(req,res)=>{
 
 app.post("/login" , async(req , res)=>{
     try {
-        const { email, password } = req.body;
-        const user = await Register.findOne({ email }).select('+password');
-        if (!user) {
-            return new Error('Signup first');
-          }
-       // res.send(req.body);
-       console.log(req.body)
-       const userData= new login(req.body)
-    
-       await userData.save();
-       res.status(201).render("user_service");
+        
+            const username = req.body.username;
+            const password = req.body.password;
 
+            const useremail = await Register.findOne({username:username});
+            if(useremail.password === password){
+                res.status(201).render("user_service");
+            }
+            else{
+                res.send("Invalid login!");
+            }
 
 
     } catch (error) {
-        res.status(500).send(error)
+        res.status(500).send("Username doesn't exist !")
     }
 })
 

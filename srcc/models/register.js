@@ -1,3 +1,4 @@
+const { json } = require("express");
 const mongoose = require("mongoose");
 const validator = require("validator");
 
@@ -7,6 +8,16 @@ const registerschema = mongoose.Schema({
         type:String,
         //required:true,
         minlength:3
+    },
+    inputState:{
+      type:String,
+      //required:true,
+      minlength:3
+    },
+    skills:{
+    type:String,
+    //required:true,
+    minlength:3
     },
     password:{
         type:String,
