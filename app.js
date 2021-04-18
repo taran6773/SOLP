@@ -153,6 +153,70 @@ app.post("/contact" , async(req , res)=>{
     }
 })
 
+app.get("/suggestions",(req,res)=>{
+    res.render("suggestions");
+});
+
+app.post("/suggestions" , async(req , res)=>{
+    try {
+       // res.send(req.body);
+       console.log(req.body)
+       const userData= new Register(req.body)
+       await userData.save();
+       res.status(201).render("suggestions");
+    } catch (error) {
+        res.status(500).send(error);
+    }
+})
+
+app.get("/infosys",(req,res)=>{
+    res.render("infosys");
+});
+
+app.post("/infosys" , async(req , res)=>{
+    try {
+       // res.send(req.body);
+       console.log(req.body)
+       const userData= new Register(req.body)
+       await userData.save();
+       res.status(201).render("infosys");
+    } catch (error) {
+        res.status(500).send(error);
+    }
+})
+
+app.get("/wipro",(req,res)=>{
+    res.render("wipro");
+});
+
+app.post("/wipro" , async(req , res)=>{
+    try {
+       // res.send(req.body);
+       console.log(req.body)
+       const userData= new Register(req.body)
+       await userData.save();
+       res.status(201).render("wipro");
+    } catch (error) {
+        res.status(500).send(error);
+    }
+})
+
+app.get("/accenture",(req,res)=>{
+    res.render("accenture");
+});
+
+app.post("/accenture" , async(req , res)=>{
+    try {
+       // res.send(req.body);
+       console.log(req.body)
+       const userData= new Register(req.body)
+       await userData.save();
+       res.status(201).render("accenture");
+    } catch (error) {
+        res.status(500).send(error);
+    }
+})
+
 // server create 
 app.listen(port , ()=> {
     console.log(`server is running at port no ${port}`);
