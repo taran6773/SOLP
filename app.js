@@ -45,7 +45,7 @@ app.post("/register" , async(req , res)=>{
        console.log(req.body)
        const userData= new Register(req.body)
        await userData.save();
-       res.status(201).render("login");
+       res.status(201).render("email_sent");
     } catch (error) {
         res.status(500).send(error);
     }
@@ -212,6 +212,22 @@ app.post("/accenture" , async(req , res)=>{
        const userData= new Register(req.body)
        await userData.save();
        res.status(201).render("accenture");
+    } catch (error) {
+        res.status(500).send(error);
+    }
+})
+
+app.get("/email_sent",(req,res)=>{
+    res.render("email_sent");
+});
+
+app.post("/email_sent" , async(req , res)=>{
+    try {
+       // res.send(req.body);
+       console.log(req.body)
+       const userData= new Register(req.body)
+       await userData.save();
+       res.status(201).render("login");
     } catch (error) {
         res.status(500).send(error);
     }
