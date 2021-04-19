@@ -39,7 +39,16 @@ const registerschema = mongoose.Schema({
         type:Number,
         //required:true,
         min:10
-    }
+    },
+    email:{
+      type:String,
+      //required:true,
+      validate(value){
+          if(!validator.isEmail(value)){
+              throw new Error("Invalid email!!")
+          }
+      }
+  }
 })
 
 // we need to create a collection
