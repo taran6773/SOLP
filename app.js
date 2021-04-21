@@ -12,6 +12,7 @@ const { resolveSoa } = require("dns");
 const  app = express();
 const port = process.env.PORT || 3000;
 
+
 //setting the path
 const staticpath =  path.join(__dirname , "public");
 const templatepath =  path.join(__dirname , "templates/views");
@@ -233,6 +234,10 @@ app.post("/email_sent" , async(req , res)=>{
         res.status(500).send(error);
     }
 })
+
+
+
+
 
 // server create 
 app.listen(port , ()=> {
