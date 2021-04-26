@@ -236,6 +236,23 @@ app.post("/email_sent" , async(req , res)=>{
 })
 
 
+app.get("/chat",(req,res)=>{
+    res.render("chat");
+});
+
+app.post("/chat" , async(req , res)=>{
+    try {
+       // res.send(req.body);
+       console.log(req.body)
+       const userData= new Register(req.body)
+       await userData.save();
+       res.status(201).render("chat");
+    } catch (error) {
+        res.status(500).send(error);
+    }
+})
+
+
 
 
 
