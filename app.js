@@ -236,17 +236,17 @@ app.post("/email_sent" , async(req , res)=>{
 })
 
 
-app.get("/chat",(req,res)=>{
-    res.render("chat");
+app.get("/chatform",(req,res)=>{
+    res.render("chatform");
 });
 
-app.post("/chat" , async(req , res)=>{
+app.post("/chatform" , async(req , res)=>{
     try {
        // res.send(req.body);
        console.log(req.body)
        const userData= new Register(req.body)
        await userData.save();
-       res.status(201).render("chat");
+       res.status(201).render("chatform");
     } catch (error) {
         res.status(500).send(error);
     }
