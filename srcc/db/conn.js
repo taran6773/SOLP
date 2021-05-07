@@ -1,7 +1,8 @@
 const mongoose = require("mongoose");
 
 //creating a database
-mongoose.connect("mongodb://localhost:27017/Learning_platform",{
+const uri = "mongodb+srv://admin:admin@cluster0.osub7.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+mongoose.connect(uri,{
     useCreateIndex:true,
     useNewUrlParser:true,
     useUnifiedTopology:true,
