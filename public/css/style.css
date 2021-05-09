@@ -10,6 +10,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body{
+  background-image:url('BlindAmpleIndigobunting-max-1mb.gif'); background-repeat:repeat;
+}
+
 li,
 p,
 a {
@@ -300,7 +304,7 @@ footer p {
 }
 .app__nav{
   width: 100%;
-  background-color: #000;
+  background-color: #fd5c63;
 }
 .app__nav__container {
   display: flex;
@@ -317,7 +321,7 @@ footer p {
   }
   .app_nav_link:hover{
     text-decoration: none;
-    
+    color: #000;
   }
 a{text-decoration: none;}
 
@@ -342,7 +346,13 @@ a{text-decoration: none;}
   text-align: center;
 }
 body{
-  background-color :white !important;
+  background-image:url('...');
+    background-size:100%;
+    background-repeat: repeat-y;
+    background-attachment: fixed;
+    height:100%;
+    width:100%;
+    z-index: -1;
 }
 .app_register{
   display: grid;
@@ -386,4 +396,57 @@ align-items: flex-start;
   font-weight: 500;
   padding: 5px;
 
+}
+.userService{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  position: relative;
+}
+.userService__cards{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 50vw;
+  margin-top: 20px;
+}
+.app__services{
+  margin-top:10px;
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-between !important;
+  width: 70vw;
+  margin: auto;
+}
+.app__services__card{
+  display: flex ;
+  flex-direction: column;
+  align-items: center;
+  transition: all .3s ease-in-out;
+  cursor: pointer;
+}
+.app__services__card>img{
+  width: 100% !important;
+  height: 85%;
+}
+.app__services__card>h3{
+  margin-top:10px;
+}
+.app__services__card:hover{
+  transform: scale(1.07);
+}
+.notes__footer{
+  position: fixed !important;
+  width: 100vw !important;
+  bottom: 0px !important;
+  /* margin-top: 1000px; */
+}
+.notes__app{
+  max-width: 500px;
+  padding: 40px;
+  border: 1px solid lightgrey;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
