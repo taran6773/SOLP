@@ -450,3 +450,19 @@ align-items: flex-start;
   border-radius: 10px;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
+
+.index-page{
+ flex-direction: row !important;
+ box-shadow: 0px 5px 10px lightgrey;
+}
+.index-page .login{
+  margin-left: 20px;
+}
+.join-us{
+  align-items: center;
+}
+.join-us a {
+  width: 168px;
+  display: block;
+  margin-top: 20px;
+}
