@@ -251,6 +251,22 @@ app.post("/chatform" , async(req , res)=>{
     }
 })
 
+app.get("/about",(req,res)=>{
+    res.render("about");
+});
+
+app.post("/about" , async(req , res)=>{
+    try {
+       // res.send(req.body);
+       console.log(req.body)
+       const userData= new Register(req.body)
+       await userData.save();
+       res.status(201).render("about");
+    } catch (error) {
+        res.status(500).send(error);
+    }
+})
+
 
 
 

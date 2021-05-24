@@ -372,9 +372,10 @@ a{text-decoration: none;}
 }
 .about__para{
   text-align: center;
+  color: #ffffff;
 }
 body{
-  background-image:url('...');
+  background-image:url('https://wallpapercave.com/wp/DOW8C4r.jpg');
     background-size:100%;
     background-repeat: repeat-y;
     background-attachment: fixed;
@@ -391,9 +392,10 @@ body{
 }
 .app_register_container{
   padding: 40px;
-  border: 1px solid lightgrey;
+  border: 1px solid rgb(5, 5, 5);
   border-radius: 10px;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
 }
 .register_form{
   display: flex;
@@ -401,16 +403,21 @@ body{
 margin-top: 20px;
 align-items: center;
 align-items: flex-start;
+color: #ffffff;
 }
 .register_form_input{
   display: flex;
   flex-direction: row;
   margin: 10px 0;
 }
+.list-group-item{
+  color: #000;
+}
 .register_form_input> h2{
   font-weight: 400;
   font-size:18px ;
   margin-right: 5px;
+  color: #000;
 }
 .register_form_button{
   align-self: center !important;
@@ -423,8 +430,9 @@ align-items: flex-start;
   font-size: 18px;
   font-weight: 500;
   padding: 5px;
-
+  color: #fd5c63;
 }
+
 .userService{
   width: 100%;
   display: flex;
@@ -454,6 +462,7 @@ align-items: flex-start;
   align-items: center;
   transition: all .3s ease-in-out;
   cursor: pointer;
+  color: #ffffff;
 }
 .app__services__card>img{
   width: 100% !important;
@@ -477,6 +486,8 @@ align-items: flex-start;
   border: 1px solid lightgrey;
   border-radius: 10px;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  color:rgb(5, 5, 5);
+  background-color: #ffffff;
 }
 
 .index-page{
@@ -500,4 +511,8 @@ align-items: flex-start;
   flex-direction: row;
   padding-left: 30px;
   padding-right: 30px;
+}
+.row{
+  margin: 20;
+  padding: 20;
 }

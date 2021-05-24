@@ -14,32 +14,33 @@
 
 <body>
 
-<div class="app__nav">
+<div class="navbar index-page">
        <div class="app__nav__container" >
           {{!-- <a class="app_nav_link" href="/" >Home</a>
           <a class="app_nav_link" href="/about id">About</a>
           <a class="app_nav_link" href="/services id">services</a>
           <a class="app_nav_link" href="/register">Register</a>
           <a class="app_nav_link" href="/login">Login</a> --}}
-          <a class="app_nav_link" href="/contact">Contact</a>
-          <a class="app_nav_link" href="/">Logout</a>
+          <a  class="rgisterText" href="/contact">Contact</a>
+          <a class="app__headerTitle" href="/">Logout</a>
        </div>
   </div>
 
-  <div class="userService" id="user_service id">
+    <div class="userService" id="user_service id">
     <h1 id="logo" class="">Available for your help!</h1>
 
-    <div class="userService__cards">
+ <div class="userService__cards">
+   <div class="app_register_container">
       <div class="card" style="width: 18rem;">
-        <img src="20-201537_notes-clipart-posted-note-post-its-icon-png.png" class="card-img-top" alt=" ">
+        <img src="notebook-logo.png" class="card-img-top" alt=" ">
         <div class="card-body">
-          <h4 class="card-title">NOTES / LECTURES</h4>
-          <p class="card-text">It consist of all the content required for academic purpose of a student..</p>
+          <h3 class="card-title">NOTES / Videos</h3>
+          <p class="card-text">It consist of the well organised content required for academic needs of a student.</p>
           <a href="/notes" class="btn btn-primary">Click Here!</a>
         </div>
       </div>
-
-
+</div>
+<div class="app_register_container">
       <div class="card" style="width: 18rem;">
         <img src="image_processing20200813-32627-hrt73n.png" class="card-img-top" alt=" ">
         <div class="card-body">
@@ -49,7 +50,8 @@
           <a href="/blogs" class="btn btn-primary">Click Here!</a>
         </div>
       </div>
-
+</div>
+<div class="app_register_container">
       <div class="card" style="width: 18rem;">
         <img src="unnamed (1).jpg" class="card-img-top" alt=" ">
         <div class="card-body">
@@ -60,7 +62,11 @@
       </div>
     </div>
   </div>
-
+ </div>
+ 
+     
+    </div>
+  </div>
 
   <script src="../jq/jquery.js" type="text/javascript"></script>
   <script src="../jq/bootstrap.js" type="text/javascript"></script>
