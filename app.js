@@ -267,6 +267,23 @@ app.post("/about" , async(req , res)=>{
     }
 })
 
+app.get("/more",(req,res)=>{
+    res.render("more");
+});
+
+app.post("/more" , async(req , res)=>{
+    try {
+       // res.send(req.body);
+       console.log(req.body)
+       const userData= new Register(req.body)
+       await userData.save();
+       res.status(201).render("more");
+    } catch (error) {
+        res.status(500).send(error);
+    }
+})
+
+
 
 
 
