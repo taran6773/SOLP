@@ -618,3 +618,26 @@ color: #ffffff;
   font-size: 4rem;
 
 }
+.indexicon_custom{
+  display:flex;
+  justify-content:space-between;
+  /* align-items:center; */
+  width: 90%;
+  margin:20px auto;
+}
+.home__nav{
+  display:flex;
+  align-items:center;
+  margin-left:100px;
+}
+.home__nav > img{
+  height:40px;
+  object-fit:contain;
+}
+
+.home__nav > a{
+  font-size:25px;
+  margin-left:15px;
+  color: #fd5c63;
+  font-weight: 600;
+}
