@@ -592,3 +592,13 @@ color: #ffffff;
   color: #fd5c63;
   border: 2px solid #555555;
 }
+.solp{
+  color: #fd5c63;
+  font-weight: 600;
+  font-size: 4rem;
+  /* letter-spacing: 1px; */
+  text-transform: capitalize;
+  text-shadow: 2px 5px 3px rgba(0, 0, 0, 0.06);
+  padding: 0;
+  justify-content: center;
+}
