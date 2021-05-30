@@ -645,3 +645,13 @@ color: #ffffff;
 .email{
   color: #f8f9fa;
 }
+#abc{
+  height: 40vh;
+  width: 40vh;
+  float: right;
+}
+#def{
+  height: 30vh;
+  width: 30vh;
+  float: left;
+}
